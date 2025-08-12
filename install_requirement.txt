@@ -1,0 +1,21 @@
+import subprocess
+import sys
+
+# List of required packages
+packages = [
+    "pandas",
+    "numpy",
+    "seaborn",
+    "scikit-learn",
+    "matplotlib"
+]
+
+def install(package):
+    """Install a package using pip."""
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+if __name__ == "__main__":
+    print("📦 Installing required packages...")
+    for package in packages:
+        install(package)
+    print("\n✅ All packages installed successfully!")
